@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 
-const Statistics = ({ title, stats }) => {
+const Statistics = ({ title = null, stats }) => {
   return (
     <section class="statistics">
-      <h2 class="title">{title}</h2>
+      {title && <h2 class="title">{title}</h2>}
 
       <ul class="stat-list">
         {stats.map(stat => (
