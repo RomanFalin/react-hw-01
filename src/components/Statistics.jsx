@@ -1,26 +1,31 @@
-const Statistics = ({ title, stats }) => (
-  <section class="statistics">
-    <h2 class="title">{title}</h2>
+import PropTypes from 'prop-types';
 
-    <ul class="stat-list">
-      <li class="item">
-        <span class="label">{stats[0].label}</span>
-        <span class="label">{stats[0].percentage}%</span>
-      </li>
-      <li class="item">
-        <span class="label">{stats[1].label}</span>
-        <span class="percentage">{stats[1].percentage}%</span>
-      </li>
-      <li class="item">
-        <span class="label">{stats[2].label}</span>
-        <span class="percentage">{stats[2].percentage}%</span>
-      </li>
-      <li class="item">
-        <span class="label">{stats[3].label}</span>
-        <span class="percentage">{stats[3].percentage}%</span>
-      </li>
-    </ul>
-  </section>
-);
+const Statistics = ({ title, stats }) => {
+  return (
+    <section class="statistics">
+      <h2 class="title">{title}</h2>
+
+      <ul class="stat-list">
+        {stats.map(stat => (
+          <li class="item" key={stat.id}>
+            <span class="label">{stat.label}</span>
+            <span class="percentage">{stat.percentage}%</span>
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+};
+
+Statistics.propTypes = {
+  title: PropTypes.string,
+  stats: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string,
+      percentage: PropTypes.number,
+    })
+  ),
+};
 
 export default Statistics;

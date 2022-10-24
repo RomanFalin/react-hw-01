@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import FriendListItem from 'components/FriendListItem';
 
 const FriendList = ({ friends }) => {
@@ -15,6 +16,13 @@ const FriendList = ({ friends }) => {
       })}
     </ul>
   );
+};
+
+FriendList.propTypes = {
+  id: PropTypes.number,
+  avatar: PropTypes.string,
+  name: PropTypes.string,
+  isOnline: PropTypes.bool,
 };
 
 export default FriendList;
