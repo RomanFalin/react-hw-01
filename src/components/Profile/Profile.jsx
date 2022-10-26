@@ -4,7 +4,7 @@ import ProfileStats from 'components/ProfileStats/ProfileStats';
 
 const Profile = ({ username, tag, location, avatar, stats }) => {
   return (
-    <div class="profile">
+    <div className="profile">
       <ProfileInfo
         username={username}
         tag={tag}
