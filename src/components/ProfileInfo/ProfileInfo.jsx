@@ -1,13 +1,20 @@
 import PropTypes from 'prop-types';
+import {
+  UserDesc,
+  UserName,
+  UserAvatar,
+  UserTag,
+  UserLocation,
+} from './ProfileInfo.styled';
 
 const ProfileInfo = ({ username, tag, location, avatar }) => {
   return (
-    <div className="description">
-      <img src={avatar} alt={username} className="avatar" />
-      <p className="name">{username}</p>
-      <p className="tag">{tag}</p>
-      <p className="location">{location}</p>
-    </div>
+    <UserDesc className="description">
+      <UserAvatar src={avatar} alt={username} className="avatar" />
+      <UserName className="name">{username}</UserName>
+      <UserTag className="tag">{tag}</UserTag>
+      <UserLocation className="location">{location}</UserLocation>
+    </UserDesc>
   );
 };
 

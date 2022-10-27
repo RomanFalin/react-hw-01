@@ -1,26 +1,33 @@
 import PropTypes from 'prop-types';
+import {
+  TransactionHistoryTable,
+  TableHeadItem,
+  TableBodyItem,
+  TableBodyRow,
+} from './TransactionHistory.styled';
+import { getBoxColor } from './TransactionHistory.styled';
 
 const TransactionHistory = ({ items }) => {
   return (
-    <table className="transaction-history">
+    <TransactionHistoryTable className="transaction-history">
       <thead>
         <tr>
-          <th>Type</th>
-          <th>Amount</th>
-          <th>Currency</th>
+          <TableHeadItem>Type</TableHeadItem>
+          <TableHeadItem>Amount</TableHeadItem>
+          <TableHeadItem>Currency</TableHeadItem>
         </tr>
       </thead>
 
       <tbody>
         {items.map(({ id, type, amount, currency }) => (
-          <tr key={id}>
-            <td>{type}</td>
-            <td>{amount}</td>
-            <td>{currency}</td>
-          </tr>
+          <TableBodyRow key={id} color={getBoxColor(type)}>
+            <TableBodyItem>{type}</TableBodyItem>
+            <TableBodyItem>{amount}</TableBodyItem>
+            <TableBodyItem>{currency}</TableBodyItem>
+          </TableBodyRow>
         ))}
       </tbody>
-    </table>
+    </TransactionHistoryTable>
   );
 };
 

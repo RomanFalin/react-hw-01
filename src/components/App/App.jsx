@@ -1,15 +1,16 @@
 import Statistics from 'components/Statistics/Statistics';
 import Profile from 'components/Profile/Profile';
-import FriendList from 'components/FriendList/FriendList';
+import FriendsList from 'components/FriendsList/FriendsList';
 import TransactionHistory from 'components/Transactions/TransactionHistory';
-import user from './user.json';
-import data from './data.json';
-import friends from './friends.json';
-import transactions from './transactions.json';
+import user from '../../user.json';
+import data from '../../data.json';
+import friends from '../../friends.json';
+import transactions from '../../transactions.json';
+import { Container } from './App.styled';
 
 export default function App() {
   return (
-    <div>
+    <Container>
       <Profile
         username={user.username}
         tag={user.tag}
@@ -18,8 +19,8 @@ export default function App() {
         stats={user.stats}
       />
       <Statistics title="Upload stats" stats={data} />
-      <FriendList friends={friends} />;
-      <TransactionHistory items={transactions} />;
-    </div>
+      <FriendsList friends={friends} />
+      <TransactionHistory items={transactions} />
+    </Container>
   );
 }
