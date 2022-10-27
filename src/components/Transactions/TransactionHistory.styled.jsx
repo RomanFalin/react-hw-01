@@ -4,6 +4,7 @@ export const TransactionHistoryTable = styled.table`
   min-width: 300px;
   background-color: #fff;
   border: 1px solid #e1e1e1;
+  border-radius: 5px;
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
 `;
@@ -13,9 +14,11 @@ export const TableHeadItem = styled.th`
   font-weight: bold;
   padding: 10px 0;
   text-transform: uppercase;
+  border-radius: 5px;
 `;
 export const TableBodyItem = styled.td`
   padding: 10px 30px;
+  border-radius: 5px;
   &:not(:last-child) {
     border-right: 1px solid #e1e1e1;
   }
