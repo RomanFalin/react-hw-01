@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
-import ProfileInfo from 'components/ProfileInfo/ProfileInfo';
-import ProfileStats from 'components/ProfileStats/ProfileStats';
+import ProfileInfo from 'components/Profile/ProfileInfo/ProfileInfo';
+import ProfileStats from 'components/Profile/ProfileStats/ProfileStats';
 import { UserCard } from './Profile.styled';
 
 const Profile = ({ username, tag, location, avatar, stats }) => {
@@ -24,10 +24,10 @@ Profile.propTypes = {
   location: PropTypes.string.isRequired,
   avatar: PropTypes.string.isRequired,
   stats: PropTypes.shape({
-    followers: PropTypes.number,
-    views: PropTypes.number,
-    likes: PropTypes.number,
-  }),
+    followers: PropTypes.number.isRequired,
+    views: PropTypes.number.isRequired,
+    likes: PropTypes.number.isRequired,
+  }).isRequired,
 };
 
 export default Profile;

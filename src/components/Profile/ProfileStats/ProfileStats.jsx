@@ -27,10 +27,10 @@ const ProfileStats = ({ stats: { followers, views, likes } }) => {
 
 ProfileStats.propTypes = {
   stats: PropTypes.shape({
-    followers: PropTypes.number,
-    views: PropTypes.number,
-    likes: PropTypes.number,
-  }),
+    followers: PropTypes.number.isRequired,
+    views: PropTypes.number.isRequired,
+    likes: PropTypes.number.isRequired,
+  }).isRequired,
 };
 
 export default ProfileStats;

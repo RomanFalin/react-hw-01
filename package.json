@@ -1,7 +1,7 @@
 {
-  "name": "react-hw-01",
+  "name": "react-hw-01-components",
   "version": "0.1.0",
-  "homepage": "https://romanfalin.github.io/react-hw-01/",
+  "homepage": "https://romanfalin.github.io/react-hw-01-components/",
   "dependencies": {
     "@csstools/normalize.css": "^12.0.0",
     "@emotion/react": "^11.10.5",

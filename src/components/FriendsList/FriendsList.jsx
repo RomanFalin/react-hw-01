@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import Friend from 'components/Friend/Friend';
+import Friend from 'components/FriendsList/Friend/Friend';
 import { FriendsBlock } from './FriendsList.styled';
 
 const FriendsList = ({ friends }) => {
@@ -15,10 +15,10 @@ const FriendsList = ({ friends }) => {
 };
 
 FriendsList.propTypes = {
-  id: PropTypes.number,
-  avatar: PropTypes.string,
-  name: PropTypes.string,
-  isOnline: PropTypes.bool,
+  id: PropTypes.number.isRequired,
+  avatar: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  isOnline: PropTypes.bool.isRequired,
 };
 
 export default FriendsList;
