@@ -9,7 +9,7 @@ import {
 } from './Statistics.styled';
 import { getRandomHexColor } from './Statistics.styled';
 
-const Statistics = ({ title = null, stats }) => {
+const Statistics = ({ title, stats }) => {
   return (
     <StaticticsSection className="statistics">
       {title && <StaticticsTitle className="title">{title}</StaticticsTitle>}
@@ -33,7 +33,7 @@ const Statistics = ({ title = null, stats }) => {
 };
 
 Statistics.propTypes = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   stats: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
